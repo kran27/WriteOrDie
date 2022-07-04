@@ -14,3 +14,23 @@ Currently all the magic is happening in one class/file that is a real mess: [`Fo
 - Add more try-catch clauses
 - Split the code a bit
 - Add documentation
+- Fix bugs
+
+### Bugs
+
+- You can cheat by setting up an autoclicker to click on either of the buttons
+
+### Okay I wanna help, what now?
+
+0. Download and install [Visual Studio 2022](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022). Make sure you selected `.NET desktop development` workload for installation.
+1. Clone this repository
+2. Make your changes.
+3. Submit PR.
+
+## Features
+
+It silently makes a backup file of the text you just wrote each time you press the stop button, but only then.
+
+## Who?
+
+#the-patio
