@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new AltUI.Controls.DarkRichTextBox();
+            this.progressBar1 = new AltUI.Controls.DarkProgressBar();
+            this.button1 = new AltUI.Controls.DarkButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new AltUI.Controls.DarkNumericUpDown();
+            this.label1 = new AltUI.Controls.DarkLabel();
+            this.button2 = new AltUI.Controls.DarkButton();
+            this.label2 = new AltUI.Controls.DarkLabel();
+            this.label3 = new AltUI.Controls.DarkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,6 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // timer1
@@ -111,7 +110,6 @@
             this.button2.Size = new System.Drawing.Size(223, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "I\'m a loser (Stop with countdown)";
-            this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
@@ -159,14 +157,14 @@
 
         #endregion
 
-        private RichTextBox richTextBox1;
-        private ProgressBar progressBar1;
-        private Button button1;
+        private AltUI.Controls.DarkRichTextBox richTextBox1;
+        private AltUI.Controls.DarkProgressBar progressBar1;
+        private AltUI.Controls.DarkButton button1;
         private System.Windows.Forms.Timer timer1;
-        private NumericUpDown numericUpDown1;
-        private Label label1;
-        private Button button2;
-        private Label label2;
-        private Label label3;
+        private AltUI.Controls.DarkNumericUpDown numericUpDown1;
+        private AltUI.Controls.DarkLabel label1;
+        private AltUI.Controls.DarkButton button2;
+        private AltUI.Controls.DarkLabel label2;
+        private AltUI.Controls.DarkLabel label3;
     }
 }

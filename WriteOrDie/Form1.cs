@@ -3,7 +3,7 @@ using Timer = System.Windows.Forms.Timer;
 
 namespace WriteOrDie
 {
-    public partial class Form1 : Form
+    public partial class Form1 : AltUI.Forms.DarkForm
     {
         public int Duration { get; set; }
         public DateTime Start { get; set; }
@@ -58,7 +58,7 @@ namespace WriteOrDie
             this.richTextBox1.Text = "";
             timer.Stop();
             this.numericUpDown1.Enabled = !this.timer1.Enabled;
-            MessageBox.Show("Text successfully destroyed without the ability to recover it.");
+            AltUI.Forms.DarkMessageBox.ShowMessage("Text successfully destroyed without the ability to recover it.", "Success");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace WriteOrDie
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                AltUI.Forms.DarkMessageBox.ShowError(ex.Message, "Error");
             }
 
         }
