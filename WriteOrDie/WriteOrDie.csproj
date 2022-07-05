@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="AltUI">
+      <HintPath>..\..\..\..\Documents\GitHub\DarkUI\AltUI\bin\Release\AltUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
