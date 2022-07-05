@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="AltUI">
-      <HintPath>..\..\..\..\Documents\GitHub\DarkUI\AltUI\bin\Release\AltUI.dll</HintPath>
+      <HintPath>AltUI.dll</HintPath>
     </Reference>
   </ItemGroup>
 
