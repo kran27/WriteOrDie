@@ -33,7 +33,8 @@
             this.progressBar1 = new AltUI.Controls.DarkProgressBar();
             this.button1 = new AltUI.Controls.DarkButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.numericUpDown1 = new AltUI.Controls.DarkNumericUpDown();
+            // Temporary fix for DarkNumericUpDown, ForeColor and BackColor does not work properly with light mode
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new AltUI.Controls.DarkLabel();
             this.button2 = new AltUI.Controls.DarkButton();
             this.label2 = new AltUI.Controls.DarkLabel();
@@ -161,7 +162,8 @@
         private AltUI.Controls.DarkProgressBar progressBar1;
         private AltUI.Controls.DarkButton button1;
         private System.Windows.Forms.Timer timer1;
-        private AltUI.Controls.DarkNumericUpDown numericUpDown1;
+        // Temporary fix for DarkNumericUpDown, ForeColor and BackColor does not work properly with light mode
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private AltUI.Controls.DarkLabel label1;
         private AltUI.Controls.DarkButton button2;
         private AltUI.Controls.DarkLabel label2;

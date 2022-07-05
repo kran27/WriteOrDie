@@ -1,5 +1,7 @@
+using Microsoft.Win32;
 using DateTime = System.DateTime;
 using Timer = System.Windows.Forms.Timer;
+
 
 namespace WriteOrDie
 {
@@ -10,6 +12,7 @@ namespace WriteOrDie
         public DateTime End { get; set; }
         public int Remaining { get; private set; }
 
+        // One timer should be enough, since they're not supposed to run simultaneously
         public Timer SelfDestructTimer = new();
         public DateTime TheEnd;
 
@@ -21,12 +24,32 @@ namespace WriteOrDie
         public Form1()
         {
             InitializeComponent();
+            this.InitializeControls();
+            this.FixTheme();
+        }
 
+        // Temporary fix for DarkNumericUpDown, ForeColor and BackColor does not work properly with light mode
+        private void FixTheme()
+        {
+            // https://stackoverflow.com/questions/51334674/how-to-detect-windows-10-light-dark-mode-in-win32-application
+            const string regPath = "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize";
+            const string keyName = "AppsUseLightTheme";
+            var regVal = (int)(Registry.GetValue(regPath, keyName, -1) ?? -1);
+
+            if (regVal != 0) return;
+
+            // These colors are not 100% consistent with the original AltUI colors
+            this.numericUpDown1.ForeColor = Color.Gainsboro;
+            this.numericUpDown1.BackColor = SystemColors.ControlDarkDark;
+        }
+
+        private void InitializeControls()
+        {
             this.timer1.Interval = 10;
-            this.InitializeProgressBar(this.numericUpDown1.Value);
-            this.SelfDestructTimer.Interval = 100;
+            this.SelfDestructTimer.Interval = 10;
             this.SelfDestructTimer.Tick += this.SelfDestruct_OnTick;
 
+            this.InitializeProgressBar(this.numericUpDown1.Value);
         }
 
         private void InitializeProgressBar(decimal seconds)
